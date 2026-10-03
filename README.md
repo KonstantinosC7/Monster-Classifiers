@@ -35,7 +35,7 @@ Metrics: accuracy and weighted F1 / precision / recall.
 
 ## Results
 
-The labels of the Kaggle test set are hidden, so the official **accuracy** below comes from uploading the generated submission files to Kaggle (see the full discussion in [`docs/report.pdf`](docs/report.pdf)).
+The labels of the Kaggle test set are hidden, so the official **accuracy** below comes from uploading the generated submission files to Kaggle (see the full discussion in the report: [`docs/report.docx`](docs/report.docx) / [`docs/report.pdf`](docs/report.pdf)).
 
 | Method | Setting | Kaggle accuracy |
 |---|---|---|
@@ -53,6 +53,8 @@ The labels of the Kaggle test set are hidden, so the official **accuracy** below
 | SVM | RBF kernel | 0.72400 |
 | Naive Bayes | Gaussian + multinomial | _not yet submitted_ |
 
+![Kaggle accuracy by classifier](docs/kaggle_accuracy.png)
+
 **Best method: SVM with a linear kernel (accuracy 0.73156)**, closely followed by the RBF-kernel SVM, the largest neural network and k-NN with k = 10. All methods land within ~6 points of each other, which is expected on such a small dataset where the classes overlap heavily.
 
 ## Project structure
@@ -62,7 +64,9 @@ monster-classification/
 ├── src/
 │   └── monster_classifiers.py   # all four methods + evaluation + submission export
 ├── docs/
-│   └── report.pdf               # the written report
+│   ├── report.docx              # the written report (Word)
+│   ├── report.pdf               # the same report as PDF
+│   └── kaggle_accuracy.png      # results chart used in the README
 ├── data/                        # put train.csv and test.csv here (not tracked)
 ├── requirements.txt
 └── README.md
